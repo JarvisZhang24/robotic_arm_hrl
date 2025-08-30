@@ -19,6 +19,7 @@ if __name__ == "__main__":
                     max_episode_steps=max_episodes_steps, 
                     tasks_to_complete=[task],
                     render_mode="human"
+                    
                 )
 
     env = CustomObservationWrapper(env , goal = task)
@@ -26,9 +27,9 @@ if __name__ == "__main__":
     print(env.env.env.env.env.model.opt.gravity)
     
     # Reset environment
-    # state, info = env.reset()
-    # print(f"State: {state}")
+    state, info = env.reset()
+    print(f"State: {state}")
 
-    # env.close()
+    
     
     
